@@ -31,3 +31,7 @@
     transform: rotate(360deg);
   }
 }
+
+.graphiql-container {
+  height: 100vh;
+}
