@@ -45,7 +45,7 @@ const GraphiQLWrapper = (props) => {
       label: "History",
       onClick: () => {
         if (typeof onToggleHistory === 'function') {
-          onToggleHistory(!this.state.historyPaneOpen);
+          onToggleHistory(!graphiqlContext.state.historyPaneOpen);
         }
         graphiqlContext.setState({ historyPaneOpen: !graphiqlContext.historyPaneOpen });
       }
@@ -121,6 +121,7 @@ const GraphiQLWrapper = (props) => {
       query={query}
       snippets={snippets}
       variables={variables}
+      serverUrl="https://bazookaand.herokuapp.com/v1alpha1/graphql"
     />
   );
 
@@ -131,6 +132,7 @@ const GraphiQLWrapper = (props) => {
       {exporter}
     </div>
   );
+
 };
 
 export default GraphiQLWrapper;
